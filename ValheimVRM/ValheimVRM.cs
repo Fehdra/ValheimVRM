@@ -377,30 +377,42 @@ namespace ValheimVRM
 		}
 	}
 
-	[HarmonyPatch(typeof(Character), "SetVisible")]
-	static class Patch_Character_SetVisible
-	{
-		[HarmonyPostfix]
-		static void Postfix(Character __instance, bool visible)
-		{
-			if (!__instance.IsPlayer()) return;
+    // I was getting errors with one of my mods that i like, InstantMonsterDrop and this fixed it lol.
+    // To prevent a NullReferenceException, you should check if vrm is not null before attempting to access its components. Here's the modified code with a null check: var lodGroup = vrm.GetComponent<LODGroup>();
+    // By adding the vrm != null check before accessing components, you should avoid the NullReferenceException. Additionally,
+    // I added a check for lodGroup != null to handle cases where the LODGroup component might be null. You can customize the error handling or logging based on your specific requirements.
 
-			if (VrmManager.PlayerToVrmInstance.TryGetValue((Player)__instance, out var vrm))
-			{
-				var lodGroup = vrm.GetComponent<LODGroup>();
-				if (visible)
-				{
-					lodGroup.localReferencePoint = __instance.GetField<Character, Vector3>("m_originalLocalRef");
-				}
-				else
-				{
-					lodGroup.localReferencePoint = new Vector3(999999f, 999999f, 999999f);
-				}
-			}
-		}
-	}
+    [HarmonyPatch(typeof(Character), "SetVisible")]
+    static class Patch_Character_SetVisible
+    {
+        [HarmonyPostfix]
+        static void Postfix(Character __instance, bool visible)
+        {
+            if (!__instance.IsPlayer()) return;
 
-	[HarmonyPatch(typeof(Player), "OnDeath")]
+            if (VrmManager.PlayerToVrmInstance.TryGetValue((Player)__instance, out var vrm) && vrm != null)
+            {
+                var lodGroup = vrm.GetComponent<LODGroup>();
+                if (lodGroup != null)
+                {
+                    if (visible)
+                    {
+                        lodGroup.localReferencePoint = __instance.GetField<Character, Vector3>("m_originalLocalRef");
+                    }
+                    else
+                    {
+                        lodGroup.localReferencePoint = new Vector3(999999f, 999999f, 999999f);
+                    }
+                }
+                else
+                {
+                    // Log or handle the case where LODGroup is null
+                }
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(Player), "OnDeath")]
 	static class Patch_Player_OnDeath
 	{
 		[HarmonyPostfix]
