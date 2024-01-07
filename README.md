@@ -1,3 +1,13 @@
+I'm not a coder, and probably won't maintain this. Refer to aMidnightNova's fork
+But for now i Forked to fix a error i was having with InstantMonsterDrop and it worked lol,  
+
+
+
+btw 
+thanks for you work aMidnightNova :}  
+
+
+===---------------------------------------------------------------===
 # ValheimVRM
 
 **This mod requires BepInEx to be installed.**
