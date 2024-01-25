@@ -1,4 +1,5 @@
-I'm not a coder, and probably won't maintain this. Refer to aMidnightNova's fork But for now i Forked to fix a error i was having with InstantMonsterDrop and it worked lol,
+I'm not a coder, i Forked to fix a error i was having and then fixed few more things :}    not sure how long i will keep this updated but,
+my Discord .[Link](https://discord.gg/PzhphZBw8A).
 
 btw thanks for your work aMidnightNova :}
 
