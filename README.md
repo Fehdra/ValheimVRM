@@ -4,8 +4,9 @@ my Discord .[Link](https://discord.gg/PzhphZBw8A).
 btw thanks for your work aMidnightNova :}
 
 
-https://github.com/Fehdra/ValheimVRM/releases/latest
-[Download](https://github.com/Fehdra/ValheimVRM/releases/latest)
+
+[Download](https://github.com/Fehdra/ValheimVRM/releases/latest).
+
 ===---------------------------------------------------------------===
 
 # ValheimVRM
