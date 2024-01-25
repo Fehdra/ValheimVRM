@@ -1,19 +1,25 @@
 I'm not a coder, i Forked to fix a error i was having and then fixed few more things :}    not sure how long i will keep this updated but,
-my Discord .[Link](https://discord.gg/PzhphZBw8A).
+my Discord .[Link](https://discord.gg/PzhphZBw8A).  for bugs il see what i can do.
 
 btw thanks for your work aMidnightNova :}
 
 
 
-[Download](https://github.com/Fehdra/ValheimVRM/releases/latest).
+My Download is  [New Releases](https://github.com/Fehdra/ValheimVRM/releases/latest).
 
 ===---------------------------------------------------------------===
 
-# ValheimVRM
+Forked from
+
+# ValheimVRM - Midnight Nova 
 
 **This mod requires BepInEx to be installed.**
 
-This fork is actively developed and maintained. If you need help, want to request a feature, or found a bug; Head on over to the [discord](https://discord.gg/q3wuVMCvXE).
+This fork of Midnight Nova is actively developed and maintained. If you need help, want to request a feature, or found a bug; Head on over to there [discord](https://discord.gg/q3wuVMCvXE).
+
+
+-----------------------------------------------------------
+
 
 ### How to install 
 Download extract it. There will be a folder called release, copy the folders inside (BepInEx,valheim_Data) into your valheim install directory.
